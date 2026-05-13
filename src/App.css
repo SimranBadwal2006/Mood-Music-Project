@@ -1,38 +1,291 @@
-.App {
+body {
+  margin: 0;
+  font-family: Poppins;
+  background: linear-gradient(-45deg, #667eea, #764ba2, #ff758c, #43cea2);
+  background-size: 400% 400%;
+  animation: bg 10s infinite;
+  color: white;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* 🌈 Animated Background */
+@keyframes bg {
+  0% { background-position:0% 50% }
+  50% { background-position:100% 50% }
+  100% { background-position:0% 50% }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  padding: 20px;
+  padding-bottom: 130px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* 🎧 Heading */
+h1 {
+  text-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+/* 🔝 TOP BAR */
+.top-bar {
   display: flex;
-  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  position: relative;
+  margin-bottom: 20px;
+}
+
+/* 🎧 Perfect Center Heading */
+.top-bar h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+/* 👤 USER SECTION */
+.user-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.user-name {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* 🚪 LOGOUT */
+.logout-btn {
+  padding: 8px 18px;
+  border-radius: 20px;
+  border: none;
   color: white;
+  background: linear-gradient(45deg, #ff4d6d, #ff758c);
+  box-shadow: 0 0 12px rgba(255, 117, 140, 0.6);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.logout-btn:hover {
+  transform: scale(1.08);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* 🔐 LOGIN */
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  padding: 35px;
+  border-radius: 20px;
+  color: white;
+  width: 320px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+}
+
+.login-box input {
+  width: 90%;
+  padding: 12px;
+  border: none;
+  border-radius: 20px;
+  margin-top: 15px;
+  outline: none;
+}
+
+.login-btn {
+  margin-top: 18px;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  background: linear-gradient(45deg, #ff758c, #ff7eb3);
+  box-shadow: 0 0 15px rgba(255, 117, 140, 0.7);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  transform: scale(1.08);
+}
+
+/* 🔍 SEARCH */
+.search {
+  padding: 12px;
+  width: 60%;
+  border-radius: 25px;
+  border: none;
+  margin: 20px 0;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  outline: none;
+  backdrop-filter: blur(8px);
+}
+
+.search::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+/* 😊 MOODS */
+.moods button {
+  margin: 8px;
+  padding: 12px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255,255,255,0.2);
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.3s;
+}
+
+.moods button:hover {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.35);
+}
+
+/* 🎵 SONG ROW */
+.songs-grid {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 20px;
+  scroll-behavior: smooth;
+}
+
+.songs-grid::-webkit-scrollbar {
+  display: none;
+}
+
+/* 🎶 SONG CARD */
+.song {
+  min-width: 250px;
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 18px;
+  padding: 15px;
+  text-align: center;
+  transition: 0.4s;
+  overflow: hidden;
+  position: relative;
+}
+
+.song:hover {
+  transform: translateY(-6px) scale(1.02);
+  background: rgba(255,255,255,0.18);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+/* ✅ IMAGE IMPROVEMENT */
+.song img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: 0.4s;
+}
+
+/* ✨ Image zoom effect */
+.song:hover img {
+  transform: scale(1.06);
+}
+
+.song h3,
+.song h4 {
+  margin: 12px 0;
+}
+
+/* ❤️ ▶ ➕ BUTTONS */
+.actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.actions button {
+  border: none;
+  padding: 8px 14px;
+  cursor: pointer;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.2);
+  color: white;
+  transition: 0.3s;
+  font-size: 16px;
+}
+
+.actions button:hover {
+  background: rgba(255,255,255,0.4);
+  transform: scale(1.05);
+}
+
+/* 🎧 PLAYER */
+.bottom-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  background: rgba(255,255,255,0.12);
+  backdrop-filter: blur(14px);
+  border-top: 1px solid rgba(255,255,255,0.2);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 12px;
+  z-index: 1000;
+}
+
+.bottom-player iframe {
+  width: 95%;
+  max-width: 600px;
+  height: 90px;
+  border: none;
+  border-radius: 12px;
+}
+
+/* 🎨 MOOD COLORS */
+.happy-theme .song {
+  background: rgba(255, 223, 90, 0.18);
+}
+
+.sad-theme .song {
+  background: rgba(100, 149, 237, 0.18);
+}
+
+.chill-theme .song {
+  background: rgba(72, 209, 204, 0.18);
+}
+
+.angry-theme .song {
+  background: rgba(255, 99, 71, 0.18);
+}
+
+/* 📱 MOBILE */
+@media (max-width: 768px) {
+
+  .search {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .song {
+    min-width: 200px;
+  }
+
+  .song img {
+    height: 180px;
+  }
+
+  .top-bar h1 {
+    font-size: 24px;
+  }
+
+  .user-name {
+    font-size: 14px;
   }
 }
