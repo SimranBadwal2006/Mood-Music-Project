@@ -30,3 +30,16 @@ npm start
 
 ## GitHub Repository
 https://github.com/SimranBadwal2006/Mood-Music-Project
+## Project Screenshots
+
+### Login Page
+![Login Page](screenshots/{A173FE27-B3B2-4413-A8F2-24F733BD3472}.png)
+
+### Home Page
+![Home Page](screenshots/{34289E1F-4598-4133-BC53-FFB56BBAF3A4}.png)
+
+### Mood Selection Page
+![Mood Page](screenshots/{7677E194-FC78-4677-8079-99315AC734CE}.png)
+
+### Playing Song
+![Playing Song](screenshots/{7677E194-FC78-4677-8079-99315AC734CE}.png)
