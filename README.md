@@ -42,4 +42,4 @@ https://github.com/SimranBadwal2006/Mood-Music-Project
 ![Mood Page](screenshots/{7677E194-FC78-4677-8079-99315AC734CE}.png)
 
 ### Playing Song
-![Playing Song](screenshots/{7677E194-FC78-4677-8079-99315AC734CE}.png)
+![Playing Song](screenshots/{5709F2AE-9EDA-490D-BA6D-DB20153065FC}.png)
